@@ -19,42 +19,70 @@
         <div class="aside">
             <h1>Search for a City</h1>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                <input id="search-term" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter A City">
             </div>
-                <button type="button" id="start-search" class="btn btn-primary">Primary</button>
+                <button type="button" id="start-search" class="btn btn-primary">Submit</button>
         </div>
         <div class="main">
-            <h1>City name</h1>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
+            <h1 id="city-name">City name</h1>
+            <p id="city-temp">Temp:</p>
+            <p id="city-wind">Wind:</p>
+            <p id="city-humidity">Humidity:</p>
         </div>
         <div class="aside2">
-            <button type="button" class="asidebtn btn btn-secondary btn-sm">Los Angeles</button>
-            <button type="button" class="asidebtn btn btn-secondary btn-sm">Denver</button>
-            <button type="button" class="asidebtn btn btn-secondary btn-sm">San Fransisco</button>
-            <button type="button" class="asidebtn btn btn-secondary btn-sm">Houston</button>
-            <button type="button" class="asidebtn btn btn-secondary btn-sm">New York</button>
-            <button type="button" class="asidebtn btn btn-secondary btn-sm">Chicago</button>
-            <button type="button" class="asidebtn btn btn-secondary btn-sm">Miami</button>
-            <button type="button" class="asidebtn btn btn-secondary btn-sm">Seattle</button>
+            <button  id="button1" type="button" class="asidebtn btn btn-secondary btn-sm">Los Angeles</button>
+            <button  id="button2"type="button" class="asidebtn btn btn-secondary btn-sm">Denver</button>
+            <button  id="button3"type="button" class="asidebtn btn btn-secondary btn-sm">San Fransisco</button>
+            <button  id="button4"type="button" class="asidebtn btn btn-secondary btn-sm">Houston</button>
+            <button  id="button5"type="button" class="asidebtn btn btn-secondary btn-sm">New York</button>
+            <button  id="button6"type="button" class="asidebtn btn btn-secondary btn-sm">Chicago</button>
+            <button  id="button7"type="button" class="asidebtn btn btn-secondary btn-sm">Miami</button>
+            <button  id="button8"type="button" class="asidebtn btn btn-secondary btn-sm">Seattle</button>
         </div>
         <div class="main2">
             <h3>5-Day Forecast:</h3>
+            <div class="DayCounter">
+                <h4>Day 1</h4>
+                <h4>Day 2</h4>
+                <h4>Day 3</h4>
+                <h4>Day 4</h4>
+                <h4>Day 5</h4>
+            </div>
             <div class="cardcontainer">
                 <div class="forecastcards">
-                    
+                    <p id="day1date">Date</p>
+                    <img class= "image" id="image1" src="" alt="">
+                    <p id="day1temp">Temp</p>
+                    <p id="day1wind">Wind</p>
+                    <p id="day1humidity">Humidity</p>
                 </div>
                 <div class="forecastcards">
+                    <p id="day2date">Date</p>
+                    <img class= "image" id="image2" src="" alt="">
+                    <p id="day2temp">Temp</p>
+                    <p id="day2wind">Wind</p>
+                    <p id="day2humidity">Humidity</p>
                 </div>
                 <div class="forecastcards">
-                    
+                    <p id="day3date">Date</p>
+                    <img class= "image" id="image3" src="" alt="">
+                    <p id="day3temp">Temp</p>
+                    <p id="day3wind">Wind</p>
+                    <p id="day3humidity">Humidity</p>
                 </div>
                 <div class="forecastcards">
-                    
+                    <p id="day4date">Date</p>
+                    <img class= "image" id="image4" src="" alt="">
+                    <p id="day4temp">Temp</p>
+                    <p id="day4wind">Wind</p>
+                    <p id="day4humidity">Humidity</p>
                 </div>
                 <div class="forecastcards">
-                    
+                    <p id="day5date">Date</p>
+                    <img class= "image" id="image5" src="" alt="">
+                    <p id="day5temp">Temp</p>
+                    <p id="day5wind">Wind</p>
+                    <p id="day5humidity">Humidity</p>
                 </div>
             </div>
         </div>
@@ -64,5 +92,5 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src='./assets/javascript/script.js'></script>
+<script src='./assets/script.js'></script>
 </html>
