@@ -13,13 +13,14 @@ var cityName = ('Los Angeles', 'Denver', 'San Fransisco', 'Houston', 'New York',
 var searchTermEl = document.getElementById('search-term');
 var startSearchEl = document.getElementById('start-search');
 startSearchEl.addEventListener('click', startSearch);
+localStorageContent()
 
 function startSearch(event) {
 	event.preventDefault();
 	var searchTerm = searchTermEl.value.trim();
  	// exit function if user input is blank
-	if (!searchTerm) return;
-
+	 if (searchTerm === "") 
+		return;
 	// otherwise fetch city coordinates
 	fetchCityCoordinates(searchTerm);
     localStorageContent()
@@ -29,17 +30,22 @@ function startSearch(event) {
 
 function localStorageContent() {
     var userInput = document.getElementById('search-term').value;
-    console.log(userInput)
-    if (localStorage.getItem('data' == null)){
+    if (localStorage.getItem('data')===null){
         localStorage.setItem('data', '[]');
     }
-    var oldData = JSON.parse(localStorage.getItem('data'));
+	// pulling old data from local storage and saving into a new array
+    var oldData = JSON.parse(localStorage.getItem('data')); 
     oldData.push(userInput);
     localStorage.setItem('data', JSON.stringify(oldData));
-    // let userInput = [];
-    // localStorage.setItem('searched', JSON.stringify(searchTermEl))
-    // userInput = JSON.parse(localStorage.getItem('searched'))
-    // console.log(userInput)
+	counter = 1; 
+	for (i=oldData.length; i < oldData.length; i--) {
+		document.getElementById('button'+(String(counter))).innerHTML = i+1
+		counter++
+		console.log(oldData)
+		if (counter > 8 ) {
+			return
+		}
+	}
 }
 
 function fetchCityCoordinates(cityName) {
@@ -56,7 +62,6 @@ function fetchCityCoordinates(cityName) {
 			// otherwise extract latitude and longitude and pass to fetchWeather function
 			var latitude = data[0].lat;
 			var longitude = data[0].lon;
-            var temp = data.timezone
 			fetchWeather(latitude, longitude);
 		})
 		.catch(function (error) {
